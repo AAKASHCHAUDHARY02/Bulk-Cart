@@ -7,4 +7,9 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  preview: {
+    port: process.env.PORT ? parseInt(process.env.PORT) : 4173,
+    host: '0.0.0.0',
+    allowedHosts: ['bulk-cart.onrender.com']
+  }
 })

@@ -19,8 +19,7 @@ await connectDB()
 await connectCloudinary()
 
 // Allow multiple origins
-const allowedOrigins = ['http://localhost:5173', 'https://bulk-cart.onrender.com']
-app.use(cors({ origin: allowedOrigins, credentials: true }));
+const allowedOrigins = ['http://localhost:5173', '']
 
 app.post('/stripe', express.raw({type: 'application/json'}), stripeWebhooks)
 
